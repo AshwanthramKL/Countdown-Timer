@@ -51,7 +51,9 @@ This project helped me recap over some concepts of CSS and JS such as  Event lis
 - classList
 - Class addition and removal
 - forEach()
-
+- Date()
+- setInterval()
+- Math.floor()
 
 ## Author
 
