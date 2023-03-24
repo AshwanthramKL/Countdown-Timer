@@ -33,7 +33,34 @@ const format = (value)=>{
   return value;
 }
 
-const futureDate = new Date(2023, 4, 18, 0, 0, 0);
+// Setting the giveaway date to be on the 18th May of every year
+const today = new Date();
+
+let giveawayDate = ()=>{
+  if(today.getFullYear > 2022){
+    if(today.getMonth() > 4){
+      return today.getFullYear()+1;
+        
+    }
+    else{
+      if(today.getDate() > 18)
+      {
+        console.log('here')
+        return today.getFullYear()+1;
+        
+      }
+      else{
+        return today.getFullYear();
+      }
+    }  
+  }
+  else{
+    return today.getFullYear();
+  }
+};
+
+
+const futureDate = new Date(giveawayDate(), 4, 18, 0, 0, 0);
 
 // console.log(futureDate);
 
