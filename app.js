@@ -76,7 +76,12 @@ function getRemainingTime(){
   items.forEach((item, index)=>{
     // console.log(item.classList[0]);
     item.textContent = format(values[index]);
-  })
+  });
+
+  if(diff < 0){
+    clearInterval(countdown);
+    deadline.innerHTML = `<h4 class='expired'>Sorry, this giveaway has expired</h4>`
+  }
 }
 
 let countdown = setInterval(getRemainingTime, 1000);
